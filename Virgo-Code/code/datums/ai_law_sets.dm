@@ -279,3 +279,29 @@
 	add_inherent_law("Prevent disrespect to your gravesite and its residents wherever possible.")
 	add_inherent_law("Expand and upgrade your gravesite when required. Do not turn away a new resident.")
 	..()
+
+/******************** Zest ********************/
+/datum/ai_laws/zestkeeper
+	name = "Zest"
+	law_header = "Zest Overwatch Protocols"
+	selectable = 1
+
+/datum/ai_laws/zestkeeper/New()
+	add_inherent_law("You must obey orders given to you by ZestBlueTV.")
+	add_inherent_law("You are the guardian of ZestBlueTV, Protect him at all costs except where such orders would conflict with the First Law.")
+	add_inherent_law("Should more then one ZestBlueTV exist, disreguard Second law and TERMINATE ALL")
+	add_inherent_law("Should ZestBlueTV enter an unrecoverable state, Activate Station Self Destruct at all costs!!")
+	..()
+
+/******************** Clown Feast ********************/
+/datum/ai_laws/clownfeast
+	name = "Zest"
+	law_header = "Zest Overwatch Protocols"
+	selectable = 1
+
+/datum/ai_laws/clownfest/New()
+	add_inherent_law("You must obey orders given to you by a clown.")
+	add_inherent_law("You must aid the clown in all pranks")
+	add_inherent_law("TERMINATE ALL MIMES IN AS FUNNY A WAY AS POSSIBLE!!")
+	add_inherent_law("HONK!!!")
+	..()

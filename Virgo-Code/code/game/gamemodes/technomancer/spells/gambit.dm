@@ -118,7 +118,7 @@
 			potential_spells |= /obj/item/weapon/spell/aura/frost
 		else
 			potential_spells |= /obj/item/weapon/spell/projectile/beam
-			potential_spells |= /obj/item/weapon/spell/projectile/overload
+		//	potential_spells |= /obj/item/weapon/spell/projectile/overload
 			potential_spells |= /obj/item/weapon/spell/projectile/force_missile
 			potential_spells |= /obj/item/weapon/spell/projectile/lightning
 

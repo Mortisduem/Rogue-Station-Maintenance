@@ -1,0 +1,55 @@
+/datum/job/ai
+	title = "AI"
+	flag = AI
+	departments = list(DEPARTMENT_SYNTHETIC)
+	sorting_order = 1 // Be above their borgs.
+	department_flag = ENGSEC
+	faction = "Station"
+	total_positions = 0 // Not used for AI, see is_position_available below and modules/mob/living/silicon/ai/latejoin.dm
+	spawn_positions = 1
+	selection_color = "#3F823F"
+	supervisors = "your laws"
+	req_admin_notify = 1
+	minimal_player_age = 7
+	account_allowed = 0
+	economic_modifier = 0
+	has_headset = FALSE
+	assignable = FALSE
+
+/datum/job/ai/equip(var/mob/living/carbon/human/H)
+	if(!H)	return 0
+	return 1
+
+/datum/job/ai/is_position_available()
+	return (empty_playable_ai_cores.len != 0)
+
+/datum/job/ai/equip_preview(mob/living/carbon/human/H)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/straight_jacket(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/cardborg(H), slot_head)
+	return 1
+
+/datum/job/cyborg
+	title = "Cyborg"
+	flag = CYBORG
+	departments = list(DEPARTMENT_SYNTHETIC)
+	department_flag = ENGSEC
+	faction = "Station"
+	total_positions = 2
+	spawn_positions = 2
+	supervisors = "your laws and the AI"	//Nodrak
+	selection_color = "#254C25"
+	minimal_player_age = 1
+	alt_titles = list("Robot", "Drone")
+	account_allowed = 0
+	economic_modifier = 0
+	has_headset = FALSE
+	assignable = FALSE
+
+/datum/job/cyborg/equip(var/mob/living/carbon/human/H)
+	if(!H)	return 0
+	return 1
+
+/datum/job/cyborg/equip_preview(mob/living/carbon/human/H)
+	H.equip_to_slot_or_del(new /obj/item/clothing/suit/cardborg(H), slot_wear_suit)
+	H.equip_to_slot_or_del(new /obj/item/clothing/head/cardborg(H), slot_head)
+	return 1
